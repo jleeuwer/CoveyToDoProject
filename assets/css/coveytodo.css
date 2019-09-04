@@ -69,7 +69,7 @@ input:focus {
 }
 
 #disp-container {
-    width: 360px;
+    /* width: 360px; */
     margin: 100px auto;
     background: #f7f7f7;
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
@@ -82,4 +82,70 @@ input:focus {
 .taskcompleted {
     color: grey;
     text-decoration: line-through;
+}
+
+h3 {
+    font: bold 12px Sans-Serif;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    background: #369;
+    color: #fff;
+    padding: 5px 10px;
+    margin: 0 0 10px 0;
+    line-height: 24px;
+    text-orientation: sideways;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    float: right;
+    height: 390px;
+}
+
+h4 {
+    font: bold 12px Sans-Serif;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    background: #369;
+    color: #fff;
+    padding: 5px 10px;
+    margin: 0 0 10px 0;
+    line-height: 24px;
+}
+
+.dispheader {
+    margin: 0;
+    padding: 50px 0px 0px 0px;
+    float: bottom;
+}
+
+.tablekwadrant1, .tablekwadrant2 {
+    border-collapse:collapse;
+    border-spacing:0;
+    border-color: black;
+    border-top-style: solid;
+    border-right-style: solid;
+    border-left-style: solid;
+    border-width:1px;
+    overflow:hidden;
+    word-break:normal;
+    text-align:left;
+    vertical-align:center;
+}
+
+.tablekwadrant3, .tablekwadrant4 {
+    border-collapse:collapse;
+    border-spacing:0;
+    border-color: black;
+    border-top-style: solid;
+    border-right-style: solid;
+    border-bottom-style: solid;
+    border-left-style: solid;
+    border-width:1px;
+    overflow:hidden;
+    word-break:normal;
+    text-align:left;
+    vertical-align:center;
+}
+
+.disprow {
+    height: 400px;
 }

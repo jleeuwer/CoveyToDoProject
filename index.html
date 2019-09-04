@@ -1,30 +1,132 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <!-- Google font -->
     <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Roboto&display=swap" rel="stylesheet">
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="assets/js/lib/jquery-3.4.1.min.js"></script>
     <!-- Stylesheet for the project -->
-    <link rel="stylesheet" href="assets/css/todoproj.css" class="text/css">
+    <link rel="stylesheet" href="assets/css/coveytodo.css" class="text/css">
 
     <title>To Do List</title>
   </head>
   <body>
 
-    <div id="disp-container">
-      <h1>To-Do List <span id="dispplus"><i class="fa fa-plus"></i></span></h1>
-      <input type="text" placeholder="Add New Todo">
-      <ul id="list">
-        <li><span><i class="far fa-trash-alt"></i></span>Test 1</li>
-        <li><span><i class="far fa-trash-alt"></i></span>Test 2</li>
-        <li><span><i class="far fa-trash-alt"></i></span>Test 3</li>
-      </ul>
+    <div class="container-fluid ">
 
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand" href="#"><i class="fas fa-hourglass-start"></i> Time</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Dropdown
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form>
+        </div>
+      </nav>
+      <!-- Content -->
+      <div class="disp-header">
+        <div class="jumbotron">
+          <h1><span aria-hidden="true"><i class="fas fa-hourglass-start"></i> </span> Stephen Covey Timemanagement</h1>
+          Efficient Time Management
+        </div>
+        <h1>To-Do List <span id="dispplus"><i class="fa fa-plus"></i></span></h1>
+        <div class="row">
+          <div class="col-lg-6">
+            <input type="text" placeholder="Add New Todo">
+          </div> 
+          <div class="col-lg-6">
+            <!-- <input type="text" placeholder="Kwadrant"> -->
+            <label for="sel-group">Prioriteit : </label>
+            <div class="sel-group">
+              <select id="sel-kwadrant">
+                  <option value="1">Belangrijk-Urgent</option>
+                  <option value="2">Belangrijk-Niet Urgent</option>
+                  <option value="3">Niet Belangrijk-Urgent</option>
+                  <option value="4">Niet Belangrijk-Niet Urgent</option>
+              </select>
+          </div>
+          </div> 
+        </div> 
+      </div>
+
+      <!-- Table for Covey -->
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-2">
+            <!-- Lege Cell -->
+          </div>
+          <div class="col-lg-5 dispheader">
+            <h4>Urgent</h4>
+          </div>
+          <div class="col-lg-5 dispheader">
+            <h4>Not Urgent</h4>
+          </div>
+        </div>
+        <div class="row disprow">
+          <div class="col-lg-2 tekstverticaal mr-0 pr-0">
+            <h3>Belangrijk</h3>
+          </div>
+          <div class="col-lg-5 tablekwadrant1">
+            <ul id="kwadrant1">
+              <li><span><i class="far fa-trash-alt"></i></span>Kwadrant 1</li>
+            </ul>                
+          </div>
+          <div class="col-lg-5 tablekwadrant2">
+            <ul id="kwadrant2">
+              <li><span><i class="far fa-trash-alt"></i></span>Kwadrant 2</li>
+            </ul>                
+          </div>
+        </div>
+        <div class="row disprow">
+          <div class="col-lg-2 tekstverticaal mr-0 pr-0">
+            <h3>Niet Belangrijk</h3>
+          </div>
+          <div class="col-lg-5 tablekwadrant3">
+            <ul id="kwadrant3">
+              <li><span><i class="far fa-trash-alt"></i></span>Kwadrant 3</li>
+            </ul>                
+            </div>
+          <div class="col-lg-5 tablekwadrant4">
+            <ul id="kwadrant4">
+                <li><span><i class="far fa-trash-alt"></i></span>Kwadrant 4</li>
+            </ul>                  
+          </div>
+        </div>
+      </div>
     </div>
 
-    <script src="assets/js/todoproj.js"></script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="assets/js/lib/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <script src="assets/js/coveytodo.js"></script>
   </body>
 </html>
